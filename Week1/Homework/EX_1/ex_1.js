@@ -21,19 +21,19 @@ connection.connect((err) => {
     console.log("database meetup selected");
   });
 
-  let invitee = `CREATE TABLE IF NOT EXISTS invitee(invitee_no INTEGER NOT NULL PRIMARY KEY , invitee_name TEXT NOT NULL , invited_by TEXT)`;
+  let invitee = `CREATE TABLE IF NOT EXISTS invitee(invitee_no INTEGER NOT NULL PRIMARY KEY , invitee_name VARCHAR(100) NOT NULL , invited_by VARCHAR(100))`;
   connection.query(invitee, function (error, results, fields) {
     if (error) throw error;
     console.log("table created");
   });
 
-  let room = `CREATE TABLE IF NOT EXISTS room(room_no INTEGER PRIMARY KEY NOT NULL, room_name TEXT, floor_number INTEGER )`;
+  let room = `CREATE TABLE IF NOT EXISTS room(room_no INTEGER PRIMARY KEY NOT NULL, room_name VARCHAR(100), floor_number INTEGER )`;
   connection.query(room, function (error, results, fields) {
     if (error) throw error;
     console.log("table created");
   });
 
-  let meeting = `CREATE TABLE IF NOT EXISTS meeting(meeting_no INTEGER PRIMARY KEY NOT NULL, meeting_title TEXT, starting_time TIME NOT NULL, ending_time TIME, room_no INTEGER)`;
+  let meeting = `CREATE TABLE IF NOT EXISTS meeting(meeting_no INTEGER PRIMARY KEY NOT NULL, meeting_title VARCHAR(100), starting_time DATETIME NOT NULL, ending_time DATETIME, room_no INTEGER)`;
   connection.query(meeting, function (error, results, fields) {
     if (error) throw error;
     console.log("table created");
@@ -60,11 +60,11 @@ connection.connect((err) => {
     console.log("added records to room");
   });
 
-  let meetingData = `INSERT INTO meeting VALUES(1,'Weekly review','08:00:00','09:00:00',102),
-  (2,'Accounting meeting','10:00:00','11:00:00',101),
-  (3,'Brainstorming','13:00:00','14:00:00',201),
-  (4,'HR Meeting','09:00:00','11:00:00',305),
-  (5,'Sales team meeting','14:00:00','15:00:00',306)`;
+  let meetingData = `INSERT INTO meeting VALUES(1,'Weekly review','2020-05-22 08:00:00','2020-05-22 09:00:00',102),
+  (2,'Accounting meeting','2020-05-22 10:00:00','2020-05-22 11:00:00',101),
+  (3,'Brainstorming','2020-05-23 13:00:00','2020-05-23 14:00:00',201),
+  (4,'HR Meeting','2020-05-22 09:00:00','2020-05-22 11:00:00',305),
+  (5,'Sales team meeting','2020-05-21 14:00:00','2020-05-21 15:00:00',306)`;
   connection.query(meetingData, function (error, results, fields) {
     if (error) throw error;
     console.log("added records to meeting");

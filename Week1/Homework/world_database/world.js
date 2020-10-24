@@ -23,10 +23,10 @@ connection.connect((err) => {
   });
 
   const citiesBetween500KAnd1M =
-    "SELECT name,population FROM city WHERE population >= 500000 AND population <= 1000000 ORDER BY population";
+    "SELECT name,population FROM city WHERE population BETWEEN 500000 AND 1000000 ORDER BY population";
   connection.query(citiesBetween500KAnd1M, function (error, results, fields) {
     if (error) console.log(error);
-    console.log(results);
+    console.log("citiesBetween500KAnd1M: ", results);
   });
 
   const europeCountries =
@@ -70,14 +70,11 @@ connection.connect((err) => {
     console.log(results);
   });
 
-  const worldPop = "SELECT population FROM country";
+  const worldPop = "SELECT SUM(population) AS World_population FROM country";
   connection.query(worldPop, function (error, results, fields) {
     if (error) console.log(error);
-    let worldPopulation = 0;
-    results.forEach((countryPop) => {
-      worldPopulation += countryPop.population;
-    });
-    console.log("World population is : " + worldPopulation);
+
+    console.log(results);
   });
 
   connection.end();
