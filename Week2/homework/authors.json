@@ -1,0 +1,137 @@
+[
+  {
+    "author_no": 1,
+    "author_name": "famous author",
+    "university": "awesome university",
+    "date of birth": "1970-01-04",
+    "h-index": 5,
+    "gender": "f",
+    "collaborators": null
+  },
+  {
+    "author_no": 12,
+    "author_name": "good author",
+    "university": "decent university",
+    "date of birth": "1980-01-05",
+    "h-index": 3,
+    "gender": "m",
+    "collaborators": 1
+  },
+  {
+    "author_no": 3,
+    "author_name": "author ized",
+    "university": "decent university",
+    "date of birth": "1992-01-20",
+    "h-index": 3,
+    "gender": "f",
+    "collaborators": null
+  },
+  {
+    "author_no": 14,
+    "author_name": "Obi Kenobi",
+    "university": "aliens' university",
+    "date of birth": "1900-01-05",
+    "h-index": 5,
+    "gender": "m",
+    "collaborators": 12
+  },
+  {
+    "author_no": 15,
+    "author_name": "Fake Author",
+    "university": "Trump University",
+    "date of birth": "1985-08-02",
+    "h-index": 1,
+    "gender": "m",
+    "collaborators": 3
+  },
+  {
+    "author_no": 7,
+    "author_name": "Batman",
+    "university": "awesome university",
+    "date of birth": "1975-08-24",
+    "h-index": 5,
+    "gender": "m",
+    "collaborators": 14
+  },
+  {
+    "author_no": 10,
+    "author_name": "Jane Doe",
+    "university": "fake university",
+    "date of birth": "1975-12-12",
+    "h-index": 3,
+    "gender": "f",
+    "collaborators": 12
+  },
+  {
+    "author_no": 6,
+    "author_name": "John Doe",
+    "university": "fake university",
+    "date of birth": "1965-03-15",
+    "h-index": 3,
+    "gender": "m",
+    "collaborators": 7
+  },
+  {
+    "author_no": 9,
+    "author_name": "Real Author",
+    "university": "real university",
+    "date of birth": "1983-03-01",
+    "h-index": 4,
+    "gender": "f",
+    "collaborators": null
+  },
+  {
+    "author_no": 4,
+    "author_name": "Suzan Becker",
+    "university": "real university",
+    "date of birth": "1990-02-21",
+    "h-index": 3,
+    "gender": "f",
+    "collaborators": 7
+  },
+  {
+    "author_no": 5,
+    "author_name": "David Kramer",
+    "university": "fake university",
+    "date of birth": "1980-11-11",
+    "h-index": 1,
+    "gender": "m",
+    "collaborators": 1
+  },
+  {
+    "author_no": 2,
+    "author_name": "Helen McMellen",
+    "university": "good university",
+    "date of birth": "1987-06-23",
+    "h-index": 4,
+    "gender": "f",
+    "collaborators": 7
+  },
+  {
+    "author_no": 8,
+    "author_name": "Hanna Montana",
+    "university": "awesome university",
+    "date of birth": "1988-05-11",
+    "h-index": 3,
+    "gender": "f",
+    "collaborators": 4
+  },
+  {
+    "author_no": 11,
+    "author_name": "Super Author",
+    "university": "awesome university",
+    "date of birth": "1980-11-11",
+    "h-index": 1,
+    "gender": "f",
+    "collaborators": 7
+  },
+  {
+    "author_no": 13,
+    "author_name": "Author Powers",
+    "university": "fake university",
+    "date of birth": "1972-03-30",
+    "h-index": 1,
+    "gender": "m",
+    "collaborators": null
+  }
+]
