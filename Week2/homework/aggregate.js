@@ -38,6 +38,18 @@ con.connect(function (err) {
     console.log(result);
   });
 
+  const AvgHindexByUni = `
+  select 
+  university,
+  avg(h_index)
+  From authors
+  group by authors.university;
+  `;
+  con.query(AvgHindexByUni, function (err, result) {
+    if (err) throw err;
+    console.log(result);
+  });
+
   const papersByUni = `
   SELECT university,COUNT(paper_id) 
   FROM authors 
@@ -46,6 +58,19 @@ con.connect(function (err) {
   GROUP BY authors.university;
   `;
   con.query(papersByUni, function (err, result) {
+    if (err) throw err;
+    console.log(result);
+  });
+
+  const minMaxHindexByUni = `
+  select
+  university,
+  min(h_index),
+  max(h_index)
+  from authors group by university;
+
+  `;
+  con.query(minMaxHindexByUni, function (err, result) {
     if (err) throw err;
     console.log(result);
   });
