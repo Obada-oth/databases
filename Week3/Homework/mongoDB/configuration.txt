@@ -1,0 +1,19 @@
+Steps to convert MySql into MongoDB database : 
+
+    - Install MongoDB. In terminal: $brew install mongodb-community@4.4
+    - Create an Atlas account 
+    - Create a cluster
+    - White-list your IP address by adding it to the IP access list under 'Network Access'
+    - Create a database user , you can do that by clicking on connect and creating 
+      a user name and a password
+    - Connect to your cluster by clicking on connect , then selecting to connect with 
+      mongo shell --> copy the connection string --> run it in the terminal --> 
+      type in the password when prompted
+    - Install Compass then connect it to MongoDB using the connection string
+    -export the data from the database new_world to 3 .csv files :
+
+       select * into outfile 'city.csv' FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' from city;
+       select * into outfile 'country.csv' FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' from country;
+       select * into outfile 'countrylanguage.csv' FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' from countrylanguage;
+
+    - From Compass UI click on Add Data and select the .csv file you want to import. 

@@ -1,0 +1,63 @@
+1- How can you convert the table into 1NF ?
+ 
+   A table would be in 1NF if every column contains an atomic value. 
+   The given table has 2 columns which do not have an atomic value (food , food description)
+   To fix this we make sure each column has only one value , by adding a new row for each 
+   value in these 2 columns. 
+
+2-What are the super, candidate, primary keys?
+
+    Super Key : 
+        
+        - member_id
+        - member_name
+        - member_id+member_name
+        - Any other combination of any of the above keys with any other column/s 
+
+    Candidate Key :
+
+        The minimal subset of the Super Key needed to identify a row is :
+
+        - member_id
+        - member_name
+
+    Primary Key : 
+        
+        I would choose member_id as it would be easier to deal with int than with string 
+        when trying to access/update data.
+
+        - member_id
+
+
+3- What are the potential relationships between different possible tables ?
+
+    There are many different possible sets of tables. I would choose to create a table 
+    for each entity , so there will be a the following tables :
+      
+        - Members : columns [member_id PRIMARY KEY, member_name, member_address]
+        - Dinners : columns [dinner_id PRIMARY KEY, dinner_date]
+        - Venues : columns [venue_code PRIMARY KEY, venue_description]
+        - Food : columns [food_code PRIMARY KEY, food_description]
+
+    The relationships between these tables would be described in the following 
+    relation tables:
+
+        - member_dinner : columns [member_id FOREIGN KEY , dinner_id FOREIGN KEY]
+        - dinner-venue : columns [dinner_id FOREIGN KEY,venue_code FOREIGN KEY]
+        - dinner-food : columns [dinner_id FOREIGN KEY,food_code FOREIGN KEY]
+
+
+4- How can you develop the set of 2NF tables?
+
+    A table is in 2NF if it is in 1NF + it does not contain any non-prime attribute that is 
+    dependent on any key other than the primary. The tables described in the previous 
+    question meet this condition.
+
+
+5- How can you develop the set of 3NF tables?
+
+    Tables described in Q3 are in 3NF because none of them contains any transitive
+    functional dependency.
+
+
+    
